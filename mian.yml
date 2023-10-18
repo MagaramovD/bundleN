@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Set up Environment Variable
+        run: echo "SECRET_ENV=din_secret" >> $GITHUB_ENV
       - name: Deploy to Webapp.io
         uses: webappio/deploy-action@v1
         with:
